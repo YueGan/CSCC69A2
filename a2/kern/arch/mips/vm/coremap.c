@@ -374,7 +374,7 @@ page_replace(void)
     	/* Randomize the entry number */
     	pageEntry = random() % num_coremap_entries;
 
-    	/* If its pinned and is non-kernel, then return the page number */
+    	/* If its not pinned and is non-kernel, then return the page number */
     	if(coremap[pageEntry].cm_pinned == 0 && coremap[pageEntry].cm_kernel == 0){
     		return pageEntry;
     	}
@@ -412,7 +412,7 @@ page_replace(void)
     	/* Hash it with the previous evicted page */
     	pageEntry = pageEntry % (int)num_coremap_entries;
 
-    	/* If its pinned and is non-kernel, then return the page number */
+    	/* If its not pinned and is non-kernel, then return the page number */
     	if(coremap[pageEntry].cm_pinned == 0 && coremap[pageEntry].cm_kernel == 0){
     		last_evicted_page = pageEntry;
     		return pageEntry;

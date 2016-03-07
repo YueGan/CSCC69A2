@@ -517,7 +517,7 @@ lpage_evict(struct lpage *lp)
 		/* Release the lock and begin swapping */
 		lpage_unlock(lp);
 
-		swap_pagein(newPA, lp->lp_swapaddr);
+		swap_pageout(newPA, lp->lp_swapaddr);
 		/* Clear its status */
 		LP_CLEAR(lp, LPF_DIRTY);
 		/* Relock. We need to set the address to INVALID_PADDR */

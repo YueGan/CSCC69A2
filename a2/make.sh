@@ -21,7 +21,7 @@ current=`pwd`
 echo "Configuring your tree for the machine on which you are working"
 # cd ./src
 # -------------------CHANGE ROOT PATH HERE ----------------------
-./configure --ostree=$HOME/cscc69w16/root
+./configure --ostree=$HOME/cscc69/root
 
 if [ $kernel_arg = "norand" ]; then
     kernel="ASST2-NORAND"
@@ -58,4 +58,4 @@ ${MAKEPRG} ${MAKEFLAGS} install ||exit
 echo
 echo "Copying sys161.conf file to the root"
 # -------------------CHANGE ROOT PATH HERE ----------------------
-cp $current/sys161.conf /cmshome/ganyue/cscc69w16/root
+cp $current/sys161.conf /cmshome/ganyue/cscc69/root

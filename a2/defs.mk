@@ -13,7 +13,7 @@
 # The things that can be set here are documented in mk/os161.config.mk.
 #
 
-OSTREE=/cmshome/ganyue/cscc69w16/root
+OSTREE=/cmshome/ganyue/cscc69/root
 PLATFORM=sys161
 MACHINE=mips
 COMPAT_CFLAGS=
